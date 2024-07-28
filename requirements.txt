@@ -1,0 +1,4 @@
+pyTelegramBotAPI==4.20.0
+python-dateutil==2.9.0.post0
+DateTime==5.5
+
