@@ -91,19 +91,19 @@ def response(function_call):
             bot.send_message(function_call.message.chat.id, 'С кого начнём?', reply_markup=z)
             bot.delete_message(function_call.message.chat.id, function_call.message.id)
 
-        elif function_call.data in h and function_call.data != 'pamat' and function_call.data != 'prirod_krasot':
+        elif function_call.data in tochc_in_marsh and function_call.data != 'pamat' and function_call.data != 'prirod_krasot':
             markup = types.InlineKeyboardMarkup()
             button1 = types.InlineKeyboardButton(text="Подробнее о локациях", callback_data=function_call.data[:-1])
             markup.add(button1)
             bot.send_message(function_call.message.chat.id,
                              'Что ж, давайте расскажу вам более подробно про маршрут нашего следования:')
-            y = '✨' + '\n✨'.join(h[function_call.data])
+            y = '✨' + '\n✨'.join(tochc_in_marsh[function_call.data])
             bot.send_message(function_call.message.chat.id, y, reply_markup=markup)
 
         elif function_call.data == 'pamat' or function_call.data == 'prirod_krasot':
             bot.send_message(function_call.message.chat.id,
                              'Что ж, давайте расскажу вам более подробно про маршрут нашего следования:')
-            y = '✨' + '\n✨'.join(h[function_call.data])
+            y = '✨' + '\n✨'.join(tochc_in_marsh[function_call.data])
             bot.send_message(function_call.message.chat.id, y)
 
         elif function_call.data in your:
