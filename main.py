@@ -21,7 +21,7 @@ for i in list_marsh:
 
 z = types.ReplyKeyboardMarkup(one_time_keyboard=True)
 animals = ["Волк", "Лиса", "Кабан", "Лось", "Косуля", "Ласка", "Хорёк", "Суслик", "Бобр", "Журавль", "Воробей", "Утка",
-           "Заяц-русак", "Вернуться к маршрутам"]
+           "Заяц-русак", "Вернуться к маршрутам", "В меню"]
 for i in animals:
     z.add(types.KeyboardButton(i))
 
